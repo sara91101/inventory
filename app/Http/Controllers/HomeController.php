@@ -25,9 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Home', [
-            'user' => Auth::user(), // example prop
-            'message' => 'Welcome from Laravel!'
-        ]);
+        return view('home');
     }
 }
