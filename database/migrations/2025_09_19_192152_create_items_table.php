@@ -12,7 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->foreignId('unit_id')->constrained('units')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->longText('description')->nullable();
+            $table->bigInteger('barcode')->nullable();
+            $table->longText('image')->nullable();
+            $table->decimal('price',12,2);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

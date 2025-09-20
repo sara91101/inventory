@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Unit extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = ['unit'];
+
+    public function items()
+    {
+        return $this->hasMany(Item::class, 'unit_id');
+    }
 }

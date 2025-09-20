@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset('vendors/simple-line-icons/css/simple-line-icons.css') }}">
         <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css') }}">
         <link rel="stylesheet" href="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
         
         <!-- Plugin css for this page -->
         <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css') }}">
@@ -94,7 +95,7 @@
 
 
         <div class="container-scroller">
-        <!-- partial:../../partials/_navbar.html -->
+        <!-- partial:././partials/_navbar.html -->
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
             <div class="me-3">
@@ -104,10 +105,10 @@
             </div>
             <div>
                 <a class="navbar-brand brand-logo" href="{{ route('home') }}">
-                <img src="./images/logo.png" alt="logo" />
+                <img src="/images/logo.png" alt="logo" />
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="{{ route('home') }}">
-                <img src="./images/favicon2.png" alt="logo" />
+                <img src="/images/favicon2.png" alt="logo" />
                 </a>
             </div>
             </div>
@@ -168,10 +169,10 @@
                 </li>
                 <li class="nav-item dropdown d-none d-lg-block user-dropdown">
                 <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="img-xs rounded-circle" src="./images/faces/face8.jpg" alt="Profile image"> </a>
+                    <img class="img-xs rounded-circle" src="/images/faces/face8.jpg" alt="Profile image"> </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                     <div class="dropdown-header text-center">
-                    <img class="img-md rounded-circle" src="./images/faces/face8.jpg" alt="Profile image">
+                    <img class="img-md rounded-circle" src="/images/faces/face8.jpg" alt="Profile image">
                     <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
                     <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
                     </div>
@@ -196,66 +197,66 @@
         </nav>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:../../partials/_sidebar.html -->
+            <!-- partial:././partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
-                    <i class="mdi mdi-home menu-icon"></i>
-                    <span class="menu-title">الرئيسية</span>
-                </a>
+                    <a class="nav-link" href="{{ route('home') }}">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">الرئيسية</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                    <i class="menu-icon fa fa-cog"></i>
-                    <span class="menu-title">الاعدادات</span>
-                    <i class="menu-arrow"></i>
-                </a>
-                <div class="collapse" id="ui-basic">
-                    <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('units.index') }}">وحدات القياس</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التصنيفات</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('branches.index') }}">الفروع</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('warehouses.index') }}">المخازن</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('expenses-items.index') }}">بنود الصرف</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التخفيضات والعروض</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">الصلاحيات </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">المستخدمين </a></li>
-                    </ul>
-                </div>
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <i class="menu-icon fa fa-cog"></i>
+                        <span class="menu-title">الاعدادات</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('units.index') }}">وحدات القياس</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التصنيفات</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('branches.index') }}">الفروع</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('warehouses.index') }}">المخازن</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('expensesItems.index') }}">بنود الصرف</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التخفيضات والعروض</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">الصلاحيات </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">المستخدمين </a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
-                    <i class="menu-icon mdi mdi-menu"></i>
-                    <span class="menu-title">العناصر</span>
-                </a>
+                    <a class="nav-link" href="{{ route('items.index') }}">
+                        <i class="menu-icon mdi mdi-menu"></i>
+                        <span class="menu-title">العناصر</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
+                <a class="nav-link" href="././docs/documentation.html">
                     <i class="menu-icon mdi mdi-human-male-female"></i>
                     <span class="menu-title">الموردين</span>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
+                <a class="nav-link" href="././docs/documentation.html">
                     <i class="menu-icon mdi mdi-account-multiple"></i>
                     <span class="menu-title">الزبائن</span>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
+                <a class="nav-link" href="././docs/documentation.html">
                     <i class="menu-icon mdi mdi-cash-multiple"></i>
                     <span class="menu-title">المبيعات</span>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
+                <a class="nav-link" href="././docs/documentation.html">
                     <i class="menu-icon mdi mdi-database"></i>
                     <span class="menu-title">المشتريات</span>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../../docs/documentation.html">
+                <a class="nav-link" href="././docs/documentation.html">
                     <i class="menu-icon fa fa-money"></i>
                     <span class="menu-title">المصروفات</span>
                 </a>
@@ -268,8 +269,8 @@
                 </a>
                 <div class="collapse" id="ui-reports">
                     <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html"> تقرير 1</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">تقرير 2</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="././pages/ui-features/buttons.html"> تقرير 1</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="././pages/ui-features/dropdowns.html">تقرير 2</a></li>
                     </ul>
                 </div>
                 </li>
@@ -281,7 +282,7 @@
                     @yield('content')
                 </div>
                 <!-- content-wrapper ends -->
-                <!-- partial:../../partials/_footer.html -->
+                <!-- partial:././partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                     <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="javascript:;" target="_blank">Inventory System</a> from our company.</span>
@@ -297,6 +298,8 @@
         </div>
         <script src="{{ asset('vendors/js/vendor.bundle.base.js') }}"></script>
         <script src="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('vendors/datatables.net/jquery.dataTables.js') }}"></script>
+        <script src="{{ asset('vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
         <script src="{{ asset('vendors/select2/select2.min.js') }}"></script>
         <script src="{{ asset('js/off-canvas.js') }}"></script>
         <script src="{{ asset('js/template.js') }}"></script>
@@ -305,5 +308,6 @@
         <script src="{{ asset('js/todolist.js') }}"></script>
         <script src="{{ asset('js/alerts.js') }}"></script>
         <script src="{{ asset('js/select2.js') }}"></script>
+        <script src="{{ asset('js/data-table.js') }}"></script>
     </body>
 </html>
