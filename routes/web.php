@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpensesItemController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\WarehouseController;
 use Illuminate\Support\Facades\Auth;
@@ -28,5 +29,5 @@ Route::resource('items', ItemController::class);
 Route::get('/itemBarcode', [ItemController::class, 'itemBarcode'])->name('itemBarcode');
 
 //suppliers
-Route::resource('suppliers', ItemController::class);
+Route::resource('suppliers', SupplierController::class);
 

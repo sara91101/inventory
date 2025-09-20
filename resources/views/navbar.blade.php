@@ -232,7 +232,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="././docs/documentation.html">
+                <a class="nav-link" href="{{ route('suppliers.index') }}">
                     <i class="menu-icon mdi mdi-human-male-female"></i>
                     <span class="menu-title">الموردين</span>
                 </a>
