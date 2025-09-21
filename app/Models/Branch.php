@@ -11,13 +11,13 @@ class Branch extends Model
     
     protected $fillable = ['branch'];
 
-    /**
-     * Get all of the comments for the Branch
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function warehouses()
     {
         return $this->hasMany(Warehouse::class, 'branch_id');
+    }
+    
+    public function expenses()
+    {
+        return $this->hasMany(Expense::class, 'branch_id');
     }
 }

@@ -11,13 +11,13 @@ class Warehouse extends Model
     
     protected $fillable = ['name','address','branch_id'];
 
-    /**
-     * Get the user that owns the Warehouse
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function branches()
     {
         return $this->belongsTo(Branch::class, 'branch_id');
+    }
+    
+    public function expenses()
+    {
+        return $this->hasMany(Expense::class, 'warehouse_id');
     }
 }

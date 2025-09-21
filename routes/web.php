@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ExpensesItemController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
@@ -28,7 +29,7 @@ Route::group(['middleware' => 'auth'],function()
     Route::resource('categories', CategoryController::class);
     Route::resource('branches', BranchController::class);
     Route::resource('warehouses', WarehouseController::class);
-    Route::resource('expensesItems', ExpensesItemController::class);
+    Route::resource('expenseItems', ExpensesItemController::class);
 
     //items
     Route::resource('items', ItemController::class);
@@ -39,5 +40,8 @@ Route::group(['middleware' => 'auth'],function()
 
     //customers
     Route::resource('customers', CustomerController::class);
+
+    //expenses
+    Route::resource('expenses', ExpenseController::class);
 });
 

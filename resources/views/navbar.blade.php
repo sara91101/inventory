@@ -218,7 +218,7 @@
                             <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التصنيفات</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('branches.index') }}">الفروع</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('warehouses.index') }}">المخازن</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{ route('expensesItems.index') }}">بنود الصرف</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('expenseItems.index') }}">بنود الصرف</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">التخفيضات والعروض</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">الصلاحيات </a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('categories.index') }}">المستخدمين </a></li>
@@ -256,7 +256,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="././docs/documentation.html">
+                <a class="nav-link" href="{{ route('expenses.index') }}">
                     <i class="menu-icon fa fa-money"></i>
                     <span class="menu-title">المصروفات</span>
                 </a>

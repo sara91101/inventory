@@ -8,7 +8,7 @@
 
             // set form action dynamically
             let form = document.getElementById('editItemForm');
-            form.action = "/expensesItems/" + id; // matches Route::put('/items/{id}')
+            form.action = "/expenseItems/" + id; // matches Route::put('/items/{id}')
 
             // show modal (Bootstrap example)
             $('#edit-item').modal('show');
@@ -24,7 +24,7 @@
                     <h5 class="modal-title" id="ModalLabel">إضافة بنود الصرف</h5>
                 </div>
 
-                <form method="POST" action="{{ route('expensesItems.store') }}">
+                <form method="POST" action="{{ route('expenseItems.store') }}">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
@@ -49,7 +49,7 @@
                     <h5 class="modal-title" id="ModalLabel">تعديل بنود الصرف</h5>
                 </div>
                 
-                <form method="POST" action="{{ route('expensesItems.store') }}" id="editItemForm">
+                <form method="POST" action="{{ route('expenseItems.store') }}" id="editItemForm">
                     @csrf
                     <div class="modal-body">
                             @method('PUT')
@@ -93,7 +93,7 @@
                           <td id="item{{ $item->id }}">{{ $item->item }}</td>
                           <td>
                             <button class="badge badge-warning"  onclick="editItem({{ $item->id }})"><i class="fa fa-edit"></i></button>
-                            <button class="badge badge-danger" onclick="destroyItem('{{ route('expensesItems.destroy', $item->id) }}')"><i class="fa fa-trash-o"></i></button>
+                            <button class="badge badge-danger" onclick="destroyItem('{{ route('expenseItems.destroy', $item->id) }}')"><i class="fa fa-trash-o"></i></button>
                           </td>
                         </tr>
                         @endforeach
