@@ -8,6 +8,7 @@ use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ExpensesItemController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\WarehouseController;
@@ -43,5 +44,8 @@ Route::group(['middleware' => 'auth'],function()
 
     //expenses
     Route::resource('expenses', ExpenseController::class);
+
+    //sales
+    Route::resource('sales', SaleController::class);
 });
 
