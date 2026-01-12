@@ -1,11 +1,15 @@
 @extends('navbar')
 
 @section('content')
+<script>
+
+    let sales = @json($sales);
+    let purchases = @json($purchases);
+</script>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="justify-content-center">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">المشتريات والمبيعات</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,8 +18,16 @@
                         </div>
                     @endif
 
-                    hi
-                </div>
+                                  <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+                                    <div class="me-3">
+                                      <div id="marketingOverview-legend"></div>
+                                    </div>
+                                  </div>
+                                  <div class="chartjs-bar-wrapper mt-3">
+                                    <canvas id="marketingOverview"></canvas>
+                                  </div>
+
+
             </div>
         </div>
     </div>

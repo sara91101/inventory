@@ -18,6 +18,6 @@ class Sale extends Model
 
     public function items()
     {
-        return parent::hasMany(SaleItem::class , 'sale_id');
+        return $this->hasMany(SaleItem::class , 'sale_id');
     }
 }

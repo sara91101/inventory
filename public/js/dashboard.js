@@ -184,25 +184,25 @@
         data: {
           labels: ["JAN","FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
           datasets: [{
-            label: 'Last week',
-            data: [110, 220, 200, 190, 220, 110, 210, 110, 205, 202, 201, 150],
-            backgroundColor: "#52CDFF",
+            label: 'Sales',
+            data: sales,
+            backgroundColor: "#ff5252ff",
             borderColor: [
-                '#52CDFF',
+                '#ff5252ff',
             ],
               borderWidth: 0,
               barPercentage: 0.35,
               fill: true, // 3: no fill
               
           },{
-            label: 'This week',
-            data: [215, 290, 210, 250, 290, 230, 290, 210, 280, 220, 190, 300],
+            label: 'purchases',
+            data: purchases,
             backgroundColor: "#1F3BB3",
             borderColor: [
                 '#1F3BB3',
             ],
             borderWidth: 0,
-              barPercentage: 0.35,
+              barPercentage: 0.5,
               fill: true, // 3: no fill
           }]
         },

@@ -8,6 +8,7 @@ use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ExpensesItemController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UnitController;
@@ -47,5 +48,8 @@ Route::group(['middleware' => 'auth'],function()
 
     //sales
     Route::resource('sales', SaleController::class);
+
+    //purchases
+    Route::resource('purchases', PurchaseController::class);
 });
 

@@ -250,7 +250,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="././docs/documentation.html">
+                <a class="nav-link" href="{{ route('purchases.index') }}">
                     <i class="menu-icon mdi mdi-database"></i>
                     <span class="menu-title">المشتريات</span>
                 </a>
@@ -298,6 +298,9 @@
         </div>
         <script src="{{ asset('vendors/js/vendor.bundle.base.js') }}"></script>
         <script src="{{ asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+
+        <script src="/vendors/chart.js/chart.umd.js"></script>
+
         <script src="{{ asset('vendors/datatables.net/jquery.dataTables.js') }}"></script>
         <script src="{{ asset('vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
         <script src="{{ asset('vendors/select2/select2.min.js') }}"></script>
@@ -309,5 +312,9 @@
         <script src="{{ asset('js/alerts.js') }}"></script>
         <script src="{{ asset('js/select2.js') }}"></script>
         <script src="{{ asset('js/data-table.js') }}"></script>
+
+        <script src="{{ asset('js/jquery.cookie.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/dashboard.js') }}"></script>
+        <script src="/js/Chart.roundedBarCharts.js"></script> 
     </body>
 </html>
